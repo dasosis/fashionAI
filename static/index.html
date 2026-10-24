@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F7F4EF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="fashion·ai">
+  <title>fashion·ai</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/static/icon-192.png">
+  <link rel="apple-touch-icon" href="/static/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="bar">
+    <button class="icon-btn" id="nav-back" aria-label="Back" hidden>
+      <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <a class="wordmark" href="#/">fashion<i>·</i>ai</a>
+    <div class="bar-right">
+      <span class="pill-status" id="job-pill" hidden></span>
+      <button class="icon-btn" id="menu-btn" aria-label="Menu">
+        <svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+    <div class="bar-progress"><i id="bar-progress"></i></div>
+  </header>
+
+  <main id="app"></main>
+
+  <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+  <aside class="sheet" id="sheet" hidden>
+    <div class="sheet-grip"></div>
+    <div class="eyebrow">Session</div>
+    <div class="sheet-row"><span>Estimated API spend</span><strong id="sheet-cost">$0.00</strong></div>
+    <div class="eyebrow">For developers</div>
+    <button class="sheet-link" data-preview="analysis">Preview photo-analysis prompt</button>
+    <button class="sheet-link" data-preview="styles">Preview looks prompt</button>
+    <div class="eyebrow">Danger zone</div>
+    <button class="sheet-link danger" id="reset">Start over</button>
+    <pre class="prompt" id="prompt-preview" hidden></pre>
+  </aside>
+
+  <div class="toast" id="toast" hidden></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
